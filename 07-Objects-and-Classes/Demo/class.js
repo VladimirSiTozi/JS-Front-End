@@ -17,9 +17,8 @@ const secondPerson = new Person('Gosho', 'Petkov');
 
 console.log(firstPerson instanceof Person);
 
-console.log(firstPerson);
+ console.log(firstPerson);
 console.log(secondPerson);
 
 firstPerson.greet(secondPerson);
 secondPerson.greet(firstPerson);
-
