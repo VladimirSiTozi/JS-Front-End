@@ -1,26 +1,26 @@
-function solve(inStock, orderedStock) {
-    const storeProvision = {}
+function solve(stock, delivery) {
+    const store = {}
 
-    for (let i = 0; i < inStock.length; i+=2) {
-        const product = inStock[i]
-        const quntity = inStock[i + 1]
-        storeProvision[product] = Number(quntity)
+    for (let i = 0; i < stock.length; i+=2) {
+        const product = stock[i]
+        const quntity = stock[i + 1]
+        store[product] = Number(quntity)
     }
 
-    for (let i = 0; i < orderedStock.length; i+=2) {
-        const product = orderedStock[i]
-        const quntity = orderedStock[i + 1]
+    for (let i = 0; i < delivery.length; i+=2) {
+        const product = delivery[i]
+        const quntity = delivery[i + 1]
         
-        if (!storeProvision[product]){
-            storeProvision[product] = 0
+        if (!store[product]){
+            store[product] = 0
         }
 
-        storeProvision[product] += Number(quntity)
+        store[product] += Number(quntity)
     }
 
 
-    for (const product in storeProvision) {
-        console.log(`${product} -> ${storeProvision[product]}`)
+    for (const product in store) {
+        console.log(`${product} -> ${store[product]}`)
     }
 }
 
